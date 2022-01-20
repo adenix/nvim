@@ -6,8 +6,9 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Netrw
+" File Exploration
 Plug 'tpope/vim-vinegar'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -78,6 +79,15 @@ function! s:build_go_files()
 endfunction
 
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
+" -----[ Go Settings ]----------------------------------------------------------
+let g:go_diagnostics_level = 2
+let g:go_doc_popup_window = 1
+let g:go_metalinter_autosave = 1
+
+" turn to next or previous errors, after open location list
+nmap <leader>j :lnext<CR>
+nmap <leader>k :lprevious<CR>
 
 " -----[ Code Completion ]------------------------------------------------------
 let g:deoplete#enable_at_startup = 1
