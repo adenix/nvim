@@ -9,6 +9,7 @@ Plug 'vim-airline/vim-airline-themes'
 " File Exploration
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -40,6 +41,7 @@ filetype plugin indent on
 
 " -----[ Line Numbers ]---------------------------------------------------------
 set number
+set relativenumber
 
 " -----[ vim-airline ]----------------------------------------------------------
 set laststatus=2
@@ -54,9 +56,13 @@ endif
 let ghregex='\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_list_hide=ghregex
 
-" -----[ Go Shortcuts ]---------------------------------------------------------
+" -----[ General Shortcuts ]----------------------------------------------------
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
+nmap <C-j> :lnext<CR>
+nmap <C-k> :lprevious<CR>
+
+" -----[ Go Shortcuts ]---------------------------------------------------------
 nnoremap <leader>a :cclose<CR>
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
@@ -84,10 +90,6 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 let g:go_diagnostics_level = 2
 let g:go_doc_popup_window = 1
 let g:go_metalinter_autosave = 1
-
-" turn to next or previous errors, after open location list
-nmap <leader>j :lnext<CR>
-nmap <leader>k :lprevious<CR>
 
 " -----[ Code Completion ]------------------------------------------------------
 let g:deoplete#enable_at_startup = 1
