@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/adenix/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["nlsp-settings.nvim"] = {
+    loaded = true,
+    path = "/Users/adenix/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
+    url = "https://github.com/tamago324/nlsp-settings.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/adenix/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
