@@ -14,9 +14,6 @@ local keymap = vim.api.nvim_set_keymap
 --   command_mode = "c",
 
 -- Normal --
--- NVimTree
-keymap("n", "<leader>e", ":NVimTreeToggl<CR>", opts)
-
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -27,26 +24,25 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
--- Telescope
-keymap("n", "<c-f>", ":Telescope find_files<CR>", opts)
-
--- Save with CTRL-s
+-- Save / Quit
 keymap("n", "<c-s>", ":w<CR>", opts)
-
--- Close
 keymap("n", "<c-w>", ":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 keymap("n", "<c-q>", ":qall<CR>", opts)
-keymap("n", "<S-w>", ":bp<bar>sp<bar>bn<bar>bd!<CR>", opts)
-keymap("n", "<S-q>", ":qall!<CR>", opts)
-
--- LSP Null LS Format
-keymap("n", "<leader>f", ":Format<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<S-Up>", ":resize +2<CR>", opts)
 keymap("n", "<S-Down>", ":resize -2<CR>", opts)
 keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
+
+-- NVimTree
+keymap("n", "<leader>e", ":NVimTreeToggl<CR>", opts)
+
+-- Telescope
+keymap("n", "<c-f>", ":Telescope find_files<CR>", opts)
+
+-- LSP Null LS Format
+keymap("n", "<leader>f", ":Format<CR>", opts)
 
 -- Move text up and down (Option-jk)
 keymap("n", "∆", "<Esc>:m .+1<CR>==", opts)
