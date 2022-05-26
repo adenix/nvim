@@ -213,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/adenix/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-go"] = {
+    loaded = true,
+    path = "/Users/adenix/.local/share/nvim/site/pack/packer/start/vim-go",
+    url = "https://github.com/fatih/vim-go"
   }
 }
 
