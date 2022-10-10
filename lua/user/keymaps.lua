@@ -53,6 +53,13 @@ keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap("n", "<leader>j", ":lua _NODE_TOGGLE()<CR>", opts)
 keymap("n", "<leader>h", ":lua _HTOP_TOGGLE()<CR>", opts)
 
+-- Testing
+-- keymap("n", "<leader>t", ":TestNearest<CR>", opts)
+-- keymap("n", "<leader>T", ":TestFile<CR>", opts)
+-- keymap("n", "<leader>a", ":TestSuite<CR>", opts)
+-- keymap("n", "<leader>l", ":TestLast<CR>", opts)
+-- keymap("n", "<leader>g", ":TestVisit<CR>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
