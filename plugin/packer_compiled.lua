@@ -223,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/adenix/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/Users/adenix/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
