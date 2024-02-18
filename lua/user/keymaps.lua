@@ -36,7 +36,7 @@ keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- NVimTree
-keymap("n", "<leader>e", ":NVimTreeToggl<CR>", opts)
+keymap("n", "<leader>e", ":NVimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<c-f>", ":Telescope find_files<CR>", opts)
@@ -49,6 +49,7 @@ keymap("n", "∆", "<Esc>:m .+1<CR>==", opts)
 keymap("n", "˚", "<Esc>:m .-2<CR>==", opts)
 
 -- Toggle Terminal
+keymap("n", "<leader>t", ":lua _DEFAULT_TOGGLE()<CR>", opts)
 keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap("n", "<leader>j", ":lua _NODE_TOGGLE()<CR>", opts)
 keymap("n", "<leader>h", ":lua _HTOP_TOGGLE()<CR>", opts)

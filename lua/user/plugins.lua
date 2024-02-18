@@ -71,6 +71,7 @@ return packer.startup(function(use)
 
   -- Development
   use "fatih/vim-go"
+  use {'neoclide/coc.nvim', branch = 'release'}
   -- use "vim-test/vim-test"
 
   -- Telescope
@@ -87,10 +88,15 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- NVimTree
-  use "kyazdani42/nvim-tree.lua"
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
 
   -- Tabs
-  use "akinsho/bufferline.nvim"
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   use "moll/vim-bbye"
 
   -- Terminal
@@ -98,6 +104,9 @@ return packer.startup(function(use)
 
   -- Which Key
   use "folke/which-key.nvim"
+
+  -- GitHub CoPilot
+  use "github/copilot.vim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -45,6 +45,12 @@ function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
 
+local default = Terminal:new({ hidden = true })
+
+function _DEFAULT_TOGGLE()
+	default:toggle()
+end
+
 local node = Terminal:new({ cmd = "node", hidden = true })
 
 function _NODE_TOGGLE()

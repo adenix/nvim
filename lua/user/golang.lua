@@ -27,7 +27,7 @@ let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
 
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 augroup completion_preview_close
   autocmd!
@@ -50,6 +50,7 @@ augroup go
 
   au FileType go nmap <leader>r  <Plug>(go-run)
   au FileType go nmap <leader>t  <Plug>(go-test)
+  au FileType go nmap <leader>b  <Plug>(go-build)
   au FileType go nmap <Leader>gt <Plug>(go-coverage-toggle)
   au FileType go nmap <Leader>i <Plug>(go-info)
   au FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
